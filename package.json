@@ -1,0 +1,44 @@
+{
+  "name": "virtual-table",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uay13211/virtual-table"
+  },
+  "sideEffects": [
+    "*.less",
+    "*.css"
+  ],
+  "scripts": {
+    "start": "vite",
+    "build": "tsc -p ./tsconfig.build.json && cp ./package.json ./dist/package.json",
+    "prepublishOnly": "pnpm run build"
+  },
+  "peerDependencies": {
+    "classnames": "2.3.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "dependencies": {
+    "@tanstack/react-virtual": "3.0.0-beta.30"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.21",
+    "@types/react-dom": "18.2.7",
+    "@typescript-eslint/eslint-plugin": "6.4.1",
+    "@typescript-eslint/parser": "6.4.1",
+    "@vitejs/plugin-react": "4.0.4",
+    "eslint": "8.48.0",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-react-refresh": "0.4.3",
+    "less": "4.2.0",
+    "prettier": "3.0.0",
+    "typescript": "5.2.2",
+    "vite": "4.4.9",
+    "vite-tsconfig-paths": "4.2.0"
+  },
+  "publishConfig": {
+    "directory": "dist",
+    "linkDirectory": true
+  }
+}
